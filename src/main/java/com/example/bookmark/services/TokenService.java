@@ -4,7 +4,9 @@ import com.example.bookmark.entities.Token;
 
 public interface TokenService {
 
-    public Token getToken(String token);
+    Token getToken(String token);
 
-    public void deleteOldTokens();
+    void deleteOldTokens();
+
+    void saveToken(String token);
 }

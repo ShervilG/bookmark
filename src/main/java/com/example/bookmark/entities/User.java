@@ -1,11 +1,17 @@
 package com.example.bookmark.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Data
+@Builder(toBuilder = true)
 @Table(name = "users")
 public class User {
 
@@ -20,4 +26,6 @@ public class User {
     private String lastName;
 
     private String email;
+
+    private String password;
 }

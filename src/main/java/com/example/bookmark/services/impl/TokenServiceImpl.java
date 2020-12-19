@@ -6,6 +6,8 @@ import com.example.bookmark.services.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
+
 @Service
 public class TokenServiceImpl implements TokenService {
 
@@ -19,5 +21,11 @@ public class TokenServiceImpl implements TokenService {
     @Override
     public void deleteOldTokens() {
         tokenRepository.deleteOldTokens();
+    }
+
+    @Override
+    public void saveToken(String token) {
+        tokenRepository.saveAndFlush(new Token().toBuilder().createdAt(new Date(System.currentTimeMillis())).token(token)
+                .build());
     }
 }

@@ -1,10 +1,13 @@
 package com.example.bookmark.services;
 
 import com.example.bookmark.dto.request.UserCreateDto;
+import com.example.bookmark.dto.request.UserLoginRequestDto;
 
 public interface UserService {
 
-    public Boolean authenticateUserToken(String token);
+    boolean authenticateUserToken(String token);
 
-    public Boolean createUser(UserCreateDto userCreateDto);
+    boolean createUser(UserCreateDto userCreateDto) throws Exception;
+
+    String loginUser(UserLoginRequestDto userLoginRequestDto) throws Exception;
 }
