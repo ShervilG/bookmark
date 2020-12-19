@@ -18,8 +18,11 @@ public class UserController {
         return userService.authenticateUserToken(userToken);
     }
 
-    @PostMapping("/create-user")
+    @PostMapping("/create")
     public Boolean createUser(@RequestBody UserCreateDto userCreateDto) {
         return true;
     }
+
+    @DeleteMapping("/delete")
+    public void deleteUser() {}
 }
