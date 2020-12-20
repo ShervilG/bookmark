@@ -28,4 +28,9 @@ public class TokenServiceImpl implements TokenService {
         tokenRepository.saveAndFlush(new Token().toBuilder().createdAt(new Date(System.currentTimeMillis())).token(token)
                 .build());
     }
+
+    @Override
+    public void deleteToken(String token) {
+        tokenRepository.deleteTopByToken(token);
+    }
 }

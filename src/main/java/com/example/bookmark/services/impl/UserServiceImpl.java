@@ -74,4 +74,13 @@ public class UserServiceImpl implements UserService {
     }
     throw new Exception("Invalid password !!");
   }
+
+  @Override
+  public boolean logoutUser(String token) throws Exception {
+    if(StringUtils.isNullOrEmpty(token)) {
+      throw new Exception("Logout token error !!");
+    }
+    tokenService.deleteToken(token);
+    return true;
+  }
 }

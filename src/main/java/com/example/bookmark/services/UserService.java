@@ -10,4 +10,6 @@ public interface UserService {
     boolean createUser(UserCreateDto userCreateDto) throws Exception;
 
     String loginUser(UserLoginRequestDto userLoginRequestDto) throws Exception;
+
+    boolean logoutUser(String token) throws Exception;
 }

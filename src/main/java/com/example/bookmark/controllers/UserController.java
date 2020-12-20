@@ -31,4 +31,9 @@ public class UserController {
     public String loginUser(@RequestBody UserLoginRequestDto userLoginRequestDto) throws Exception {
         return userService.loginUser(userLoginRequestDto);
     }
+
+    @GetMapping("/logout")
+    public boolean logoutUser(@RequestBody String token) throws Exception {
+        return userService.logoutUser(token);
+    }
 }

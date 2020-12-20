@@ -14,6 +14,11 @@ public interface TokenRepository extends JpaRepository<Token, Long> {
 
     @Transactional
     @Modifying
-    @Query(nativeQuery = true,value = "delete from tokens where created_at <= now() - interval '1 hours'")
+    @Query(nativeQuery = true, value = "delete from tokens where created_at <= now() - interval '1 hours'")
     void deleteOldTokens();
+
+    @Transactional
+    @Modifying
+    @Query(nativeQuery = true, value = "delete from tokens where token = ?1")
+    void deleteTopByToken(String token);
 }

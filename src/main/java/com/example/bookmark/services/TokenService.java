@@ -9,4 +9,6 @@ public interface TokenService {
     void deleteOldTokens();
 
     void saveToken(String token);
+
+    void deleteToken(String token);
 }
