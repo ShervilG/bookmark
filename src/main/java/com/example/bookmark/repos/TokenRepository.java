@@ -20,5 +20,5 @@ public interface TokenRepository extends JpaRepository<Token, Long> {
     @Transactional
     @Modifying
     @Query(nativeQuery = true, value = "delete from tokens where token = ?1")
-    void deleteTopByToken(String token);
+    int deleteTopByToken(String token);
 }

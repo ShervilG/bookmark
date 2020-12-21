@@ -14,7 +14,7 @@ public class DeleteTokenScheduler {
 
     @Autowired TokenService tokenService;
 
-    @Scheduled(fixedDelay = 1000L)
+    @Scheduled(fixedDelay = 300000L)
     public void deleteOldTokens() {
         System.out.println("Token deletion scheduler started at : " + new Date(System.currentTimeMillis()));
         tokenService.deleteOldTokens();

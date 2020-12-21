@@ -10,5 +10,5 @@ public interface TokenService {
 
     void saveToken(String token);
 
-    void deleteToken(String token);
+    int deleteToken(String token);
 }

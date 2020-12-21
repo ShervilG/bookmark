@@ -80,7 +80,6 @@ public class UserServiceImpl implements UserService {
     if(StringUtils.isNullOrEmpty(token)) {
       throw new Exception("Logout token error !!");
     }
-    tokenService.deleteToken(token);
-    return true;
+    return tokenService.deleteToken(token) > 0;
   }
 }

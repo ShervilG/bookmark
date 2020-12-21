@@ -30,7 +30,7 @@ public class TokenServiceImpl implements TokenService {
     }
 
     @Override
-    public void deleteToken(String token) {
-        tokenRepository.deleteTopByToken(token);
+    public int deleteToken(String token) {
+        return tokenRepository.deleteTopByToken(token);
     }
 }
