@@ -1,4 +1,4 @@
-package com.example.bookmark.common.utils;
+package com.example.bookmark.utils;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;

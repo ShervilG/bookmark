@@ -1,4 +1,4 @@
-package com.example.bookmark.common.utils;
+package com.example.bookmark.utils;
 
 public class StringUtils {
 
